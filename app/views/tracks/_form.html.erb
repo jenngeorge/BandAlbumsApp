@@ -1,0 +1,31 @@
+<% action_url = (action == :new) ? tracks_url : track_url(track) %>
+<form action="<%= action_url %>" method="post">
+  <% if action == :edit %>
+   <input type="hidden" name="_method" value="patch">
+ <% end %>
+  <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+  <label for="track_title">Title</label>
+  <input
+    name="track[title]"
+    value="<%= track.title %>"
+    id="track_title">
+
+  <label for="album_title">Album Name </label>
+    <select name="track[album_id]" id="album_title">
+    <% albums.each do |album| %>
+      <option value="<%= album.id %>"><%= album.title %></option>
+    <% end %>
+    </select>
+
+  <label for="track_description">Track Lyrics </label>
+    <textarea name="track[description]"
+    id="track_description">
+      <%= @track.description %>
+    </textarea>
+
+  <input type="submit">
+</form>

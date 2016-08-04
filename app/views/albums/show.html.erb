@@ -9,7 +9,7 @@
 
 <h3> Tracks </h3>
 <ul>
-<% @album.tracks.each do |album| %>
+<% @album.tracks.each do |track| %>
   <li> <%= link_to "#{track.title}", track_url(track) %></li>
 <% end %>
 </ul>

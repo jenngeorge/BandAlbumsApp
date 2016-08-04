@@ -1,0 +1,9 @@
+<h2><%= @track.title %></h2>
+
+<p><%= @track.description %></p>
+
+<%= link_to "Create New Track", new_album_track_url(@track.album) %>
+<%= link_to "Edit", edit_track_url%>
+<%= button_to "Delete", track_url(@track), method: :delete%>
+<%= link_to "All Albums by #{@track.album.title}", album_url(@track.album)%>
+<%= link_to "New Track", new_album_track_url(@track.album) %>

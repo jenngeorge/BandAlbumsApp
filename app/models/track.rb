@@ -1,5 +1,5 @@
 class Track < ActiveRecord::Base
-  validates :name, presence: true
+  validates :title, presence: true
 
   belongs_to :album,
     primary_key: :id,
