@@ -21,7 +21,7 @@ class BandsController < ApplicationController
   end
 
   def edit
-    @band = Band.find(params[:name])
+    @band = Band.find(params[:id])
   end
 
   def show
@@ -29,7 +29,7 @@ class BandsController < ApplicationController
   end
 
   def destroy
-    @band = Band.find(params[:name]).destroy
+    @band = Band.find(params[:id]).destroy
     flash[:success] = "User deleted"
     redirect_to bands_url
   end
