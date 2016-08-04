@@ -8,7 +8,6 @@ class AlbumsController < ApplicationController
   def new
     @album = Album.new
     @bands = Band.all
-    @current_band = Band.find_by_id(params[:band_id])
     render :new
   end
 
@@ -24,6 +23,7 @@ class AlbumsController < ApplicationController
 
   def edit
     @album = Album.find(params[:id])
+    @bands = Band.all
   end
 
   def update
@@ -44,7 +44,7 @@ class AlbumsController < ApplicationController
   def destroy
     @album = Album.find(params[:id]).destroy
     flash[:success] = "User deleted"
-    redirect_to albums_url
+    redirect_to band_url(@album.band)
   end
 
   private
