@@ -3,3 +3,11 @@
 
 <%= link_to "Edit", edit_band_url%>
 <%= button_to "Delete", band_url(@band), method: :delete%>
+<%= link_to "All Bands", bands_url%>
+
+<h3> Albums </h3>
+<ul>
+<% @band.albums.each do |album| %>
+  <li> <%= link_to "#{band.name}", band_url(band) %></li>
+<% end %>
+</ul>
