@@ -1,4 +1,4 @@
-class TrackController < ApplicationController
+class TracksController < ApplicationController
   def new
   end
 
@@ -12,5 +12,5 @@ class TrackController < ApplicationController
   end
 
   def band_params
-  end 
+  end
 end

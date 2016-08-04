@@ -1,4 +1,4 @@
-class AlbumController < ApplicationController
+class AlbumsController < ApplicationController
   def new
   end
 
@@ -12,5 +12,5 @@ class AlbumController < ApplicationController
   end
 
   def band_params
-  end 
+  end
 end
