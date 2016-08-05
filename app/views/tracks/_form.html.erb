@@ -22,11 +22,17 @@
     <% end %>
     </select>
 
-  <label for="track_description">Track Lyrics </label>
+  <label for="track_description">Track Description </label>
     <textarea name="track[description]"
     id="track_description">
       <%= @track.description %>
     </textarea>
+
+    <label for="track_lyrics">Track Lyrics </label>
+      <textarea name="track[lyrics]"
+      id="track_lyrics">
+        <%= @track.lyrics %>
+      </textarea>
 
   <input type="submit">
 </form>
