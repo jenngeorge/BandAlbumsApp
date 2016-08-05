@@ -18,6 +18,14 @@
   <% end%>
 </header>
 
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
+<% if flash[:errors] %>
+  <p><%= flash[:errors].join(", ") %></p>
+<% end %>
+
 <%= yield %>
 
 

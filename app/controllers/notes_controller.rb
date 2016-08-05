@@ -5,6 +5,7 @@ class NotesController < ApplicationController
     @note = Note.new(note_params)
     @note.author_id = current_user.id
     @note.save
+    flash[:errors] = @note.errors.full_messages
     redirect_to track_url(@note.track_id)
   end
 
