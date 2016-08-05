@@ -1,4 +1,5 @@
 class TracksController < ApplicationController
+  before_action :check_login
 
   def new
     @track = Track.new

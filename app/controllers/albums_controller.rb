@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-
+  before_action :check_login
   # def index
   #   @albums = albums.all
   #   render :index

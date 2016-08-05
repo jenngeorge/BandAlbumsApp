@@ -20,6 +20,11 @@ class User < ActiveRecord::Base
    length: { minimum: 6, allow_nil: true }
  )
 
+  has_many :notes,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: "Note"
+
   after_initialize :ensure_session_token
 
   def self.generate_session_token
