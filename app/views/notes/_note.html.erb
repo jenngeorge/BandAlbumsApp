@@ -1,0 +1,5 @@
+
+<h3> Authored by: <%= note.author.email %> </h3>
+<%= note.comment %>
+<p> posted at <%= note.created_at %> </p>
+<%= button_to "Delete", note_url(note), method: :delete%>

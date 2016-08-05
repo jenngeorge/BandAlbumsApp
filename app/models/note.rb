@@ -1,5 +1,6 @@
 class Note < ActiveRecord::Base
-  
+  validates :author_id, :track_id, :comment, presence: true
+
   belongs_to :author,
     primary_key: :id,
     foreign_key: :author_id,
